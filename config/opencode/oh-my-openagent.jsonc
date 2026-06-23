@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "atlas": {
+      "fallback_models": [
+        "opencode/big-pickle",
+        "opencode/deepseek-v4-flash-free",
+        "opencode/mimo-v2.5-free",
+        "opencode/nemotron-3-super-free"
+      ],
+      "model": "opencode/minimax-m3-free"
+    },
+    "hephaestus": {
+      "fallback_models": [
+        "opencode/big-pickle",
+        "opencode/deepseek-v4-flash-free",
+        "opencode/mimo-v2.5-free",
+        "opencode/nemotron-3-super-free"
+      ],
+      "model": "opencode/minimax-m3-free"
+    },
+    "prometheus": {
+      "fallback_models": [
+        "opencode/big-pickle",
+        "opencode/deepseek-v4-flash-free",
+        "opencode/mimo-v2.5-free",
+        "opencode/nemotron-3-super-free"
+      ],
+      "model": "opencode/minimax-m3-free"
+    },
+    "sisyphus": {
+      "fallback_models": [
+        "opencode/big-pickle",
+        "opencode/deepseek-v4-flash-free",
+        "opencode/mimo-v2.5-free",
+        "opencode/nemotron-3-super-free"
+      ],
+      "model": "opencode/minimax-m3-free"
+    }
+  },
+  "categories": {
+    "quick": {
+      "fallback_models": [
+        "opencode/deepseek-v4-flash-free",
+        "opencode/mimo-v2.5-free",
+        "opencode/nemotron-3-super-free",
+        "opencode/minimax-m3-free"
+      ],
+      "model": "opencode/big-pickle"
+    },
+    "visual-engineering": {
+      "fallback_models": [
+        "opencode/deepseek-v4-flash-free",
+        "opencode/mimo-v2.5-free",
+        "opencode/nemotron-3-super-free",
+        "opencode/minimax-m3-free"
+      ],
+      "model": "opencode/big-pickle"
+    }
+  },
+  "disabled_skills": [
+    "security-research",
+    "security-review"
+  ]
+}

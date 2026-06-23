@@ -1,0 +1,30 @@
+# OpenCode 主配置 - 包含 API Key，不上传
+config/opencode/opencode.jsonc
+
+# 自动生成的备份文件
+config/opencode/opencode.jsonc.backup-*
+
+# gstack 编译产物（可重装，不需要备份）
+claude/skills/gstack/dist/
+claude/skills/gstack/bin/
+claude/skills/gstack/browse/dist/
+claude/skills/gstack/design/dist/
+claude/skills/gstack/make-pdf/dist/
+
+# gstack 测试相关（非技能运行必需）
+claude/skills/gstack/test/
+claude/skills/gstack/__test__/
+
+# html-ppt 测试截图和文档图片（重装后自备）
+**/html-ppt/scripts/verify-output/
+**/html-ppt/docs/readme/*.png
+**/html-ppt/docs/readme/*.gif
+
+# 重复安装的 html-ppt（.agents 和 .claude 各有一份，保留一份即可）
+# 注：.agents/skills/html-ppt 和 .claude/skills/html-ppt 内容相同
+# 你可以在 sync-to-repo.ps1 里排除其中一个
+
+# Windows 系统文件
+Thumbs.db
+Desktop.ini
+*.DS_Store
