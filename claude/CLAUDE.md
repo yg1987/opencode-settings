@@ -23,6 +23,21 @@
 6. `codegraph callers/callees <符号>` — 调用关系
 7. 最后才用 Read/Grep 补充细节
 
+## /learn-codebase 执行规范
+
+`/learn-codebase` 或任何"学习代码库""了解项目""阅读源码"的请求，同样优先使用 codegraph 而非逐文件遍历：
+
+1. `codegraph status` → 如未初始化则 `codegraph init && codegraph index`
+2. `codegraph explore <项目>` → 获取模块架构、路由、关键类
+3. `codegraph callers/callees <关键方法>` → 调用链
+4. `codegraph query <业务关键词>` → 定位所有相关符号（类、方法、路由）
+5. 补读 codegraph 覆盖不了的业务逻辑文件（设计意图、配置含义、已知风险等）
+6. 写记忆文件
+
+**Why**: codegraph 索引（精确到每个方法/字段/路由的节点和边）比手工读文件更完整、更准确、更快。纯手工遍历容易遗漏或记错，且与"分析流程规范"割裂。
+
+**注意**: codegraph 是静态分析，无法表达设计意图和已知风险（如"7 天静默期是留修正窗口"），所以需要少量手工阅读补全业务上下文。
+
 ## 修改约束
 
 **任何涉及修改代码、配置、文件的请求，必须先向用户说明"要改什么、为什么改、怎么改"，等用户确认后才能动手。禁止擅自修改。**
